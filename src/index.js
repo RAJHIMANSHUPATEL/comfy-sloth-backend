@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 const cors = require("cors")
 require("dotenv").config();
-require("./conn")
+require("./config/conn")
 
 // middlewares
 app.use(express.json());
