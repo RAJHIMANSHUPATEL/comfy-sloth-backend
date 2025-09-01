@@ -1,5 +1,6 @@
 const express = require("express");
-const productRoute = require("./routes/product.route")
+const productRouter = require("./routes/product.route")
+const userRouter = require("./routes/user.route")
 const app = express();
 const port = 3000;
 const cors = require("cors")
@@ -11,7 +12,8 @@ app.use(express.json());
 app.use(cors())
 
 // routes
-app.use("/api/products", productRoute)
+app.use("/api/products", productRouter)
+app.use("/api/user", userRouter)
 
 
 app.get("/", (req, res)=> {
